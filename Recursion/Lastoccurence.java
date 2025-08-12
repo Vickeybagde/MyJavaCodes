@@ -5,15 +5,15 @@ public class Lastoccurence {
         if(i == arr.length){
             return -1;
         }
-
-        if(arr[i] == key){
+        int isFound = lastmeaana(arr, key, i+1);
+        if( isFound == -1 && arr[i] == key){
             return i;
         }
-        return lastmeaana(arr, key, i-1);
+        return isFound;
     }
     
     public static void main(String[] args) {
-        int arr[] = { 2,4,6,5,4,7,8,10,12,14};
+        int arr[] = { 8,3,6,9,5,10,2,5,3};
         System.out.println(lastmeaana(arr, 5, 0));
     }
 }
